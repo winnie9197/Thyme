@@ -1,20 +1,19 @@
 import React from 'react';
 import './PostCard.css';
 import Card from 'react-bootstrap/Card';
-import Button from 'react-bootstrap/Button';
+import Badge from 'react-bootstrap/Badge';
 
 class PostCard extends React.Component {
 	render() {
 		return (
 			<Card style={{ width: '18rem' }}>
-			  <Card.Img variant="top" src="holder.js/100px180" />
+			<Card.Img variant="top" src="./holder.jpg" style={{height: '18rem'}}/>
 			  <Card.Body>
-			    <Card.Title>Card Title</Card.Title>
+			  	<Badge variant="primary">Primary</Badge>{' '}
+			    <Badge variant="secondary">Secondary</Badge>
 			    <Card.Text>
-			      Some quick example text to build on the card title and make up the bulk of
-			      the card's content.
+			      Restaurant or Post Description.
 			    </Card.Text>
-			    <Button variant="primary">Go somewhere</Button>
 			  </Card.Body>
 			</Card>
 		);
