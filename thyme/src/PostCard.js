@@ -6,7 +6,7 @@ import Badge from 'react-bootstrap/Badge';
 class PostCard extends React.Component {
 	render() {
 		return (
-			<Card style={{ width: '18rem' }}>
+			<Card cards style={{ width: '18rem' }}>
 			<Card.Img variant="top" src="./holder.jpg" style={{height: '18rem'}}/>
 			  <Card.Body>
 			  	<Badge variant="primary">Primary</Badge>{' '}

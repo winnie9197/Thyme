@@ -3,6 +3,8 @@ import './Post.css';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
+import Card from 'react-bootstrap/Card';
+import Badge from 'react-bootstrap/Badge';
 
 
 function Post() {
@@ -15,9 +17,43 @@ function Post() {
 
       		<Container>
 	    		<Row>
-				    <Col>Card 1</Col>
-				    <Col>Card 2</Col>
-				    <Col>Card 3</Col>
+				    <Col>
+				    	<Card style={{ width: '18rem' }}>
+						<Card.Img variant="top" src="./holder.jpg" style={{height: '18rem'}}/>
+						  <Card.Body>
+						  	<Badge variant="primary">Primary</Badge>{' '}
+						    <Badge variant="secondary">Secondary</Badge>
+						    <Card.Text>
+						      Restaurant or Post Description.
+						    </Card.Text>
+						  </Card.Body>
+						</Card>
+					</Col>
+				    <Col>
+				    	<Card style={{ width: '18rem' }}>
+						<Card.Img variant="top" src="./holder.jpg" style={{height: '18rem'}}/>
+						  <Card.Body>
+						  	<Badge variant="primary">Primary</Badge>{' '}
+						    <Badge variant="secondary">Secondary</Badge>
+						    <Card.Text>
+						      Restaurant or Post Description.
+						    </Card.Text>
+						  </Card.Body>
+						</Card>
+				    </Col>
+
+				    <Col>
+				    	<Card style={{ width: '18rem' }}>
+						<Card.Img variant="top" src="./holder.jpg" style={{height: '18rem'}}/>
+						  <Card.Body>
+						  	<Badge variant="primary">Primary</Badge>{' '}
+						    <Badge variant="secondary">Secondary</Badge>
+						    <Card.Text>
+						      Restaurant or Post Description.
+						    </Card.Text>
+						  </Card.Body>
+						</Card>
+				    </Col>
 				</Row>
 			</Container>
     
