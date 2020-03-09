@@ -3,63 +3,42 @@ import './Post.css';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import Card from 'react-bootstrap/Card';
-import Badge from 'react-bootstrap/Badge';
+import PostCard from './PostCard';
+import CardDeck from 'react-bootstrap/CardDeck';
+// import Badge from 'react-bootstrap/Badge';
 
 
-function Post() {
-	return (
+class Post extends React.Component {
+	
+	constructor(props) {
+		super(props);
 
-		<div className="Post">
-      		<header className="Post-header">
-        		This is the Post header.
-      		</header>
+		//state init
+		var info =  [["First Restaurant", "Restaurant or Post Description.1"],
+				["Second Restaurant", "Restaurant or Post Description.2"],
+				["Third Restaurant", "Restaurant or Post Description.3"],
+			];
+		this.state = {postInfo: info};
+	}
 
 
-      		<Container>
-	    		<Row>
-				    <Col>
-				    	<Card style={{ width: '18rem' }}>
-						<Card.Img variant="top" src="./holder.jpg" style={{height: '18rem'}}/>
-						  <Card.Body>
-						  	<Badge variant="primary">Primary</Badge>{' '}
-						    <Badge variant="secondary">Secondary</Badge>
-						    <Card.Text>
-						      Restaurant or Post Description.
-						    </Card.Text>
-						  </Card.Body>
-						</Card>
-					</Col>
-				    <Col>
-				    	<Card style={{ width: '18rem' }}>
-						<Card.Img variant="top" src="./holder.jpg" style={{height: '18rem'}}/>
-						  <Card.Body>
-						  	<Badge variant="primary">Primary</Badge>{' '}
-						    <Badge variant="secondary">Secondary</Badge>
-						    <Card.Text>
-						      Restaurant or Post Description.
-						    </Card.Text>
-						  </Card.Body>
-						</Card>
-				    </Col>
+	render() {
+		const cards = this.state.postInfo.map((item) =><Col xs="4"><PostCard name={item[0]} detail={item[1]}/></Col>);
+		return (
+			<div className="Post">
+	      		<header className="Post-header">
+	        		This is the Post header.
+	      		</header>
 
-				    <Col>
-				    	<Card style={{ width: '18rem' }}>
-						<Card.Img variant="top" src="./holder.jpg" style={{height: '18rem'}}/>
-						  <Card.Body>
-						  	<Badge variant="primary">Primary</Badge>{' '}
-						    <Badge variant="secondary">Secondary</Badge>
-						    <Card.Text>
-						      Restaurant or Post Description.
-						    </Card.Text>
-						  </Card.Body>
-						</Card>
-				    </Col>
-				</Row>
-			</Container>
-    
-    	</div>
-	)
+	      		<Container>
+					    <Row>
+						   	{cards}
+						</Row>				
+				</Container>
+	    
+	    	</div>
+		);
+	}
 }
 
 export default Post;
