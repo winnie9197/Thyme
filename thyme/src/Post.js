@@ -12,22 +12,14 @@ class Post extends React.Component {
 	
 	constructor(props) {
 		super(props);
-
-		//state init
-		var info =  [["First Restaurant", "Restaurant or Post Description.1"],
-				["Second Restaurant", "Restaurant or Post Description.2"],
-				["Third Restaurant", "Restaurant or Post Description.3"],
-			];
-		this.state = {postInfo: info};
 	}
 
-
 	render() {
-		const cards = this.state.postInfo.map((item) =><Col xs="4"><PostCard name={item[0]} detail={item[1]}/></Col>);
+		const cards = this.props.postInfo.map((item) =><Col xs="4"><PostCard name={item[0]} detail={item[1]}/></Col>);
 		return (
 			<div className="Post">
 	      		<header className="Post-header">
-	        		This is the Post header.
+	        		This is the Post header. 
 	      		</header>
 
 	      		<Container>
