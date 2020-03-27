@@ -2,8 +2,8 @@
 
 This documents the technologies used in building/running Thyme.
 
-Main languages:
-React
+Main technologies:
+ReactJS
 
 Technologies used:
 Sketch (UI design)
