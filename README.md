@@ -18,7 +18,7 @@ To run Thyme:
 
 
 ![Thyme Demo]
-(./images/screenshot-thyme.png)
+(./public/images/screenshot-thyme.png)
 -------------------------------------
 
 ## Available Scripts
