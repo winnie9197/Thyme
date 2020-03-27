@@ -16,9 +16,8 @@ To run Thyme:
 	cd Thyme/thyme
 	npm start
 
-
-![Thyme Demo]
-(https://raw.githubusercontent.com/winnie9197/Thyme/master/thyme/public/images/screenshot-thyme.png)
+Demo:
+![Thyme Demo](https://raw.githubusercontent.com/winnie9197/Thyme/master/thyme/public/images/screenshot-thyme.png)
 
 -------------------------------------
 
