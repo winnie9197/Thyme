@@ -15,12 +15,9 @@ class Post extends React.Component {
 	}
 
 	render() {
-		const cards = this.props.postInfo.map((item) =><Col xs="4"><PostCard name={item[0]} detail={item[1]}/></Col>);
+		const cards = this.props.postInfo.map((item) =><Col xs="4"><PostCard name={item[0]} detail={item[1]} img={item[2]}/></Col>);
 		return (
 			<div className="Post">
-	      		<header className="Post-header">
-	        		This is the Post header. 
-	      		</header>
 
 	      		<Container>
 					    <Row>

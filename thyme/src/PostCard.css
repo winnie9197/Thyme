@@ -1,0 +1,16 @@
+.card-title {
+	display: inline-block;
+}
+
+.card {
+	margin: 0 auto;
+}
+
+.card-img {
+	overflow: hidden;
+}
+
+.resto-intro {
+	width: 16rem;
+	overflow: hidden;
+}

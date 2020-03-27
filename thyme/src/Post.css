@@ -1,3 +1,8 @@
 .Post {
-  text-align: left;
+ 	text-align: left;
+  	margin: 60px 40px;
+}
+
+.container {
+	padding: 0 auto;
 }

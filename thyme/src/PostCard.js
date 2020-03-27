@@ -6,12 +6,14 @@ import Badge from 'react-bootstrap/Badge';
 class PostCard extends React.Component {
 	render() {
 		return (
-			<Card cards style={{ width: '18rem'}}>
-			  <Card.Img variant="top" src="./holder.jpg" style={{height: '18rem'}}/>
+			<Card cards style={{ width: '16rem'}}>
+			  <Card.Img variant="bottom" src={this.props.img} style={{height: '14rem'}}/>
 			  <Card.Body>
-			  {this.props.name}{' '}  
-			  	<Badge variant="primary">Primary</Badge>{' '}
-			    <Badge variant="secondary">Secondary</Badge>
+			  <div className="resto-intro">
+			  	<Card.Title>{this.props.name}</Card.Title>{' '}  
+			  	<Badge variant="primary">tag1</Badge>{' '}
+			    <Badge variant="secondary">tag2</Badge>
+			   </div>
 			    <Card.Text>
 			      {this.props.detail}
 			    </Card.Text>
