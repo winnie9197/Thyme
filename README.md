@@ -16,6 +16,9 @@ To run Thyme:
 	cd Thyme/thyme
 	npm start
 
+
+![Thyme Demo]
+(./images/screenshot-thyme.png)
 -------------------------------------
 
 ## Available Scripts
