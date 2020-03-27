@@ -13,8 +13,7 @@ React Bootstrap
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 To run Thyme:
-	cd Thyme/thyme
-	npm start
+	cd Thyme/thyme > npm start
 
 ![Thyme Demo](https://raw.githubusercontent.com/winnie9197/Thyme/master/thyme/public/images/screenshot-thyme.png)
 
