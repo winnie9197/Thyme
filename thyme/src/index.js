@@ -1,12 +1,20 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
 import * as serviceWorker from './serviceWorker';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
+import App from './App';
+import Firebase, { FirebaseContext } from './components/Firebase';
 // ReactDOM.render(<App />, document.getElementById('root'));
-ReactDOM.render(<App/>, document.getElementById('root'));
+
+//This contains the only instance of Firebase in the entire app
+ReactDOM.render(
+	<FirebaseContext.Provider values={new Firebase()}>
+		<App/>
+	</FirebaseContext.Provider>, 
+	document.getElementById('root')
+);
 
 
 // If you want your app to work offline and load faster, you can change
