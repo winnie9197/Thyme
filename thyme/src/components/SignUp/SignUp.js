@@ -45,21 +45,28 @@ class SignUpForm extends Component {
 			passwordTwo,
 			error,
 		} = this.state;
+
+		const isInvalid = 
+			passwordOne !== passwordTwo ||
+			passwordOne === '' ||
+			email === '' ||
+			username === '';
 	
 		return (
 			<Form onSubmit={this.onSubmit}>
 				<Form.Group controlId="username">
-					<Form.Label>username</Form.Label>
+					<Form.Label>Full Name</Form.Label>
 					<Form.Control 
-						ref="username" 
+						name="username" 
 						value={username} 
 						onChange={this.onChange} 
 						placeholder="Full Name">
 					</Form.Control>
 				</Form.Group>
 				<Form.Group controlId="email">
+					<Form.Label>Email</Form.Label>
 					<Form.Control
-						ref="email"
+						name="email"
 						value={email}
 						onChange={this.onChange}
 						type="email"
@@ -70,8 +77,9 @@ class SignUpForm extends Component {
     				</Form.Text>
 				</Form.Group>
 				<Form.Group controlId="passwordOne">
+					<Form.Label>Password</Form.Label>
 					<Form.Control
-						ref="passwordOne"
+						name="passwordOne"
 						value={passwordOne}
 						onChange={this.onChange}
 						type="password"
@@ -80,7 +88,7 @@ class SignUpForm extends Component {
 				</Form.Group>
 				<Form.Group controlId="passwordTwo">
 					<Form.Control
-						ref="passwordTwo"
+						name="passwordTwo"
 						value={passwordTwo}
 						onChange={this.onChange}
 						type="password"
@@ -88,8 +96,9 @@ class SignUpForm extends Component {
 					</Form.Control>
 				</Form.Group>
 
-				<Button type="submit">Sign Up</Button>
-
+				<Button disabled={isInvalid} type="submit">Sign Up</Button>
+				
+				{/*Firebase's error objects*/}
 				{error && <p>{error.message}</p>}
 			</Form>
 		);
