@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import  { Link, withRouter } from 'react-router-dom';
 import { compose } from 'recompose';
 
-// import Form from 'react-bootstrap/form';
-// import Button from 'react-bootstrap/button';
+import Form from 'react-bootstrap/form';
+import Button from 'react-bootstrap/button';
 
 import { withFirebase } from '../Firebase';
 import * as ROUTES from '../../constants/routes';
@@ -109,43 +109,94 @@ class SignUpFormBase extends Component {
 			email === '' ||
 			username === '';
 	
-		return (
-      <form onSubmit={this.onSubmit}>
-        <input
-          name="username"
-          value={username}
-          onChange={this.onChange}
-          type="text"
-          placeholder="Full Name"
-        />
-        <input
-          name="email"
-          value={email}
-          onChange={this.onChange}
-          type="text"
-          placeholder="Email Address"
-        />
-        <input
-          name="passwordOne"
-          value={passwordOne}
-          onChange={this.onChange}
-          type="password"
-          placeholder="Password"
-        />
-        <input
-          name="passwordTwo"
-          value={passwordTwo}
-          onChange={this.onChange}
-          type="password"
-          placeholder="Confirm Password"
-        />
-        <button disabled={isInvalid} type="submit">
-          Sign Up
-        </button>
+		// return (
+	 //      <form onSubmit={this.onSubmit}>
+	 //        <input
+	 //          name="username"
+	 //          value={username}
+	 //          onChange={this.onChange}
+	 //          type="text"
+	 //          placeholder="Full Name"
+	 //        />
+	 //        <input
+	 //          name="email"
+	 //          value={email}
+	 //          onChange={this.onChange}
+	 //          type="text"
+	 //          placeholder="Email Address"
+	 //        />
+	 //        <input
+	 //          name="passwordOne"
+	 //          value={passwordOne}
+	 //          onChange={this.onChange}
+	 //          type="password"
+	 //          placeholder="Password"
+	 //        />
+	 //        <input
+	 //          name="passwordTwo"
+	 //          value={passwordTwo}
+	 //          onChange={this.onChange}
+	 //          type="password"
+	 //          placeholder="Confirm Password"
+	 //        />
+	 //        <button disabled={isInvalid} type="submit">
+	 //          Sign Up
+	 //        </button>
 
-        {error && <p>{error.message}</p>}
-      </form>
-    );
+	 //        {error && <p>{error.message}</p>}
+	 //      </form>
+  //   );
+
+	    return (
+	    	<Form onSubmit={this.onSubmit}>
+				<Form.Group controlId="username">
+					<Form.Label>Full Name</Form.Label>
+					<Form.Control 
+						name="username" 
+						value={username} 
+						onChange={this.onChange} 
+						placeholder="Full Name">
+					</Form.Control>
+				</Form.Group>
+				<Form.Group controlId="email">
+					<Form.Label>Email</Form.Label>
+					<Form.Control
+						name="email"
+						value={email}
+						onChange={this.onChange}
+						type="email"
+						placeholder="Email Address">
+					</Form.Control>
+					<Form.Text className="text-muted">
+      					We'll never share your email with anyone else.
+    				</Form.Text>
+				</Form.Group>
+				<Form.Group controlId="passwordOne">
+					<Form.Label>Password</Form.Label>
+					<Form.Control
+						name="passwordOne"
+						value={passwordOne}
+						onChange={this.onChange}
+						type="password"
+						placeholder="Password">
+					</Form.Control>
+				</Form.Group>
+				<Form.Group controlId="passwordTwo">
+					<Form.Control
+						name="passwordTwo"
+						value={passwordTwo}
+						onChange={this.onChange}
+						type="password"
+						placeholder="Confirm Password">
+					</Form.Control>
+				</Form.Group>
+
+				<Button disabled={isInvalid} type="submit">Sign Up</Button>
+				
+				{/*Firebase's error objects*/}
+				{error && <p>{error.message}</p>}
+			</Form>
+	  	);
 	}
 };
 
