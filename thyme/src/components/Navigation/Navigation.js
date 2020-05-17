@@ -11,7 +11,7 @@ class Navigation extends React.Component {
 	render() {
 		return (
 			<div>
-				<Navbar activeKey="#home" variant="light">
+				<Navbar variant="light">
 		          <Navbar.Brand href="#home">
 		          <img
 		            src="./images/thyme-logo.png"
