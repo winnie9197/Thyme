@@ -1,5 +1,8 @@
 # Thyme
 
+An experimental project with the goal to promote social distancing and foster genuine interactions.
+
+-------------------------------------
 This documents the technologies used in building/running Thyme.
 
 Main technologies:
