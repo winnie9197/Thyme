@@ -10,4 +10,3 @@ To run Thyme:
 
 ![Thyme Demo](https://raw.githubusercontent.com/winnie9197/Thyme/master/thyme/public/images/screenshot-thyme.png)
 
-*images are by courtesy of contributors to https://unsplash.com/*
